@@ -1,0 +1,134 @@
+HasnainAbbasSial/McScrapper
+
+
+
+Disconnect
+Add Root Directory (used for build and deploy steps. Docs↗)
+Branch connected to production
+Changes made to this GitHub branch will be automatically pushed to this environment.
+Branch
+
+main
+
+Disconnect
+Wait for CI
+Trigger deployments after all GitHub actions have completed successfully.
+
+Make sure you have accepted our updated GitHub permissions required for this feature.
+
+Networking
+Public Networking
+Access your application over HTTP with the following domains
+mcscrap.up.railway.app
+Metal Edge
+
+
+
+
+Domain
+McScrap
+.up.railway.app
+
+Edit Port
+Not Available
+
+
+Cancel
+
+Update
+
+Custom Domain
+
+TCP Proxy
+Private Networking
+Communicate with this service from within the Railway network.
+web.railway.internal
+IPv6
+
+
+This private URL will be functional after the next deployment of this service.
+
+DNS
+web
+.railway.internal
+
+Endpoint name available!
+
+
+Cancel
+
+Update
+Build
+Builder
+
+Railpack
+
+Beta
+
+New app builder developed by Railway. Docs↗
+
+Custom Build Command
+Override the default build command that is run when building your app. Docs↗
+
+Build Command
+Watch Paths
+Gitignore-style rules to trigger a new deployment based on what file paths have changed. Docs↗
+
+Watch Paths
+Deploy
+Custom Start Command
+Command that will be run to start new deployments. Docs↗
+Start command
+gunicorn --worker-class eventlet -w 1 --bind 0.0.0.0:$PORT app:app
+Add pre-deploy step (Docs↗)
+Regions
+Configure how many instances of this service are deployed in each region.
+Southeast Asia (Singapore)
+
+Replicas
+1
+Instance
+Multi-region replicas are only available on the Pro plan.
+
+Learn More↗
+Teardown
+Configure old deployment termination when a new one is started. Docs↗
+
+Resource Limits
+Max amount of vCPU and Memory to allocate to each replica for this service.
+CPU: 2 vCPU
+
+Plan limit: 2 vCPU
+
+Memory: 1 GB
+
+Plan limit: 1 GB
+
+Upgrade to toggle resource limits
+Cron Schedule
+Run the service according to the specified cron schedule.
+
+Cron Schedule
+Healthcheck Path
+Endpoint to be called before a deploy completes to ensure the new deployment is live. Docs↗
+
+Healthcheck Path
+Serverless
+Containers will scale down to zero and then scale up based on traffic. Requests while the container is sleeping will be queued and served when the container wakes up. Docs↗
+
+Restart Policy
+Configure what to do when the process exits. Docs↗
+On Failure
+
+Restart the container if it exits with a non-zero exit code.
+
+
+Your plan only supports up to 10 retries
+
+Upgrade
+Number of times to try and restart the service if it stopped due to an error.
+Max restart retries
+10
+Config-as-code
+Railway Config File
+Manage your build and deployment settings through a config file. Docs↗

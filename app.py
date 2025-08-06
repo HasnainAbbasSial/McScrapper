@@ -359,6 +359,13 @@ def get_status():
         'data_count': len(scraped_data)
     })
 
+@app.route('/health')
+def health_check():
+    return jsonify({
+        'status': 'healthy',
+        'message': 'FMCSA Scraper is running'
+    })
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     socketio.run(app, host='0.0.0.0', port=port, debug=False)
